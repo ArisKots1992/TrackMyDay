@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="aris.kots.trackmyday.MainActivity">
+
+    <item
+        android:id="@+id/viewPath"
+        app:showAsAction="always"
+        android:icon="@mipmap/view_path"
+        android:title="@string/viewPath"/>
+
+</menu>

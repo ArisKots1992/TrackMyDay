@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="aris.kots.trackmyday.ViewStatistics"
+    tools:showIn="@layout/activity_view_statistics">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:indeterminateTint="#5474b8"
+        android:layout_alignParentTop="true" />
+
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/progressBar"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/label_activities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:text="Walking"
+                android:textColor="#000000"
+                android:textSize="@dimen/labelSize2" />
+
+            <LinearLayout
+                android:id="@+id/upperLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_activities"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/walking"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@mipmap/ic_directions_walk_black_48dp"
+                    android:enabled="false" />
+
+                <!--<Button-->
+                <!--android:id="@+id/running"-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:background="@mipmap/running"-->
+                <!--android:enabled="false" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/onVehicle"-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:background="@mipmap/ic_directions_car_black_48dp"-->
+                <!--android:enabled="false" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upperLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upperLayout"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/walk_line"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#ff0000ff"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/run_line"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#FF6347"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/car_line"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#40C400"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/upperLayout2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:background="#ff0000ff" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_line"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_distance_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="@string/distance"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km "
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speed_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        android:text="@string/speed"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km/h"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_time_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/time"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_below="@+id/card_view"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:indeterminateTint="#5474b8" />
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/progressBar2"
+        android:id="@+id/card_viewr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/label_activitiesr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:text="Running"
+                android:textColor="#000000"
+                android:textSize="@dimen/labelSize2" />
+
+            <LinearLayout
+                android:id="@+id/upperLayoutr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_activitiesr"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                    android:id="@+id/walkingr"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@mipmap/ic_directions_walk_black_48dp"
+                    android:enabled="false" />
+
+                <!--<Button-->
+                <!--android:id="@+id/running"-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:background="@mipmap/running"-->
+                <!--android:enabled="false" />-->
+
+                <!--<Button-->
+                <!--android:id="@+id/onVehicle"-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="48dp"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:background="@mipmap/ic_directions_car_black_48dp"-->
+                <!--android:enabled="false" />-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upperLayout2r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upperLayoutr"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/walk_liner"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#ff0000ff"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/run_liner"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#FF6347"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/car_liner"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#40C400"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_liner"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/upperLayout2r"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:background="#FF6347" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_liner"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_distance_labelr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="@string/distance"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_distancer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km "
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speed_labelr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        android:text="@string/speed"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speedr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km/h"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_time_labelr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/time"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        android:layout_below="@+id/card_viewr"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:indeterminateTint="#5474b8" />
+    <android.support.v7.widget.CardView
+        android:layout_below="@+id/progressBar3"
+        android:id="@+id/card_viewv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardBackgroundColor="@android:color/white">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="6dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                android:id="@+id/label_activitiesv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="1dp"
+                android:text="In Vehicle"
+                android:textColor="#000000"
+                android:textSize="@dimen/labelSize2" />
+
+            <LinearLayout
+                android:id="@+id/upperLayoutv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_activitiesv"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <Button
+                android:id="@+id/onVehicle"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="3dp"
+                android:background="@mipmap/ic_directions_car_black_48dp"
+                android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upperLayout2v"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upperLayoutv"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <View
+                    android:id="@+id/walk_linev"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#ff0000ff"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/run_linev"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#FF6347"
+                    android:visibility="invisible" />
+
+                <View
+                    android:id="@+id/car_linev"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="7dp"
+                    android:background="#40C400"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_linev"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/upperLayout2v"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:background="#40C400" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view_linev"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_distance_labelv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:text="@string/distance"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_distancev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km "
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speed_labelv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+
+                        android:text="@string/speed"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_average_speedv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0 km/h"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_time_labelv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/time"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSize2" />
+
+                    <TextView
+                        android:id="@+id/card_recording_elapse_timev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00:00:00"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/labelSizeContent2" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

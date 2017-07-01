@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="aris.kots.trackmyday.MainActivity">
+
+    <item
+        android:id="@+id/viewChart"
+        app:showAsAction="always"
+        android:icon="@mipmap/ic_bubble_chart_white_48dp"
+        android:title="View Chart"/>
+
+</menu>

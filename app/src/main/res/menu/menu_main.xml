@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="aris.kots.trackmyday.MainActivity">
+
+    <!--<item-->
+        <!--android:id="@+id/bike"-->
+        <!--android:icon="@mipmap/ic_directions_bike_white_48dp"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Bicycle" />-->
+    <!--<item-->
+        <!--android:id="@+id/walk"-->
+        <!--android:icon="@mipmap/ic_directions_walk_white_48dp"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Walk/Run" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/car"-->
+        <!--android:icon="@mipmap/ic_directions_car_white_48dp"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Car" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/bus"-->
+        <!--android:icon="@mipmap/ic_directions_bus_white_48dp"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Bus/Train" />-->
+
+    <!--<item-->
+        <!--android:id="@+id/auto"-->
+        <!--android:icon="@mipmap/ic_check_circle_white_48dp"-->
+        <!--app:showAsAction="always"-->
+        <!--android:title="Auto"/>-->
+
+</menu>

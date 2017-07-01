@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Track My Day</string>
+    <string name="title_activity_track">Tracking Started</string>
+    <string name="title_activity_accelerometer_test">AccelerometerTest</string>
+    <string name="title_activity_view_data">My Recordings</string>
+
+    <!-- MainActivity-->
+    <string name="start_tracking">Start Tracking</string>
+    <string name="view_data">View Data</string>
+    <string name="view_stats">View Statistics</string>
+    <string name="redeem">Redeem\nPoints</string>
+    <string name="bike">Bicycling</string>
+    <string name="walk">Walking</string>
+    <string name="run">Running</string>
+    <string name="car">Car</string>
+    <string name="bus">Bus</string>
+    <string name="train">Train</string>
+    <string name="tram">Tram</string>
+    <string name="score">Score</string>
+    <string name="scoreLabel">Score:</string>
+    <string name="detect">Detectable Activities:</string>
+
+    <!-- TrackActivity-->
+    <string name="pause">Pause</string>
+    <string name="elapseTime">Elapsed Time</string>
+    <string name="currentSpeed">Current Speed</string>
+    <string name="totalDistance">Total Distance</string>
+    <string name="viewPath">View\nPath</string>
+    <string name="activity">Activity</string>
+
+    <!-- ViewDataActivity-->
+    <string name="speed">Speed</string>
+    <string name="distance">Distance</string>
+    <string name="time">Time</string>
+    <string name="title_activity_view_recording">ViewRecording</string>
+
+    <string name="action_info">Photo info</string>
+    <string name="action_photo">View photo</string>
+    <string name="title_activity_view_statistics">Past Month</string>
+</resources>
+
